@@ -4,7 +4,6 @@ import numpy as np
 import sklearn
 import streamlit as st
 import joblib
-import matplotlib
 from IPython import get_ipython
 from PIL import Image
 
@@ -16,7 +15,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # 1: Major Injury, 2: Minor Injury, 0: Fatal Injury
 
-st.set_page_config(page_title=" Prediction of Accident Severity",
+st.set_page_config(page_title=" Prediction of Vehicle Accident Severity",
         page_icon="🚗", layout="wide")
 
 #creating option list for dropdown menu
@@ -109,7 +108,12 @@ with b:
 
 
 # description about the project and code files       
-st.subheader("🧾Description:")
+st.subheader("📝Description:")
+st.text_area(st.text("""
+        This dataset originates from the police departments of Addis Ababa Sub-city and serves as the foundation for master's research endeavors. 
+        The dataset's compilation draws from manual records documenting road traffic accidents spanning 2017 to 2020, encompassing 32 distinct features and 12,316 instances of accidents. 
+        Subsequently, a preprocessing phase is undertaken, followed by the application of diverse machine learning classification algorithms to discern significant accident causes through comprehensive analysis.
+"""), width=500)
 st.text("""
         This dataset originates from the police departments of Addis Ababa Sub-city and serves as the foundation for master's research endeavors. 
         The dataset's compilation draws from manual records documenting road traffic accidents spanning 2017 to 2020, encompassing 32 distinct features and 12,316 instances of accidents. 
@@ -123,9 +127,9 @@ st.text("""The target feature is `Accident_severity` which is a multi-class data
 The task aims to classify this variable based on the other 31 features.
 The metric for evaluation is f1-score.
 """)
-
-st.markdown("This project is insipired by [Stackup](https://app.stackup.dev/campaign_page/python-end-to-end-multiclass-classification-project) and [Avikumar Talaviya](https://github.com/avikumart/Road-Traffic-Severity-Classification-Project). You may find GitHub repository link of this project: [Click Here](https://github.com/Jia02/-Multiclass-Classification-ML-Streamlit)")          
   
 # run the main function        
 if __name__ == '__main__':
   main()
+
+  st.markdown("This project is insipired by [Stackup](https://app.stackup.dev/campaign_page/python-end-to-end-multiclass-classification-project) and [Avikumar Talaviya](https://github.com/avikumart/Road-Traffic-Severity-Classification-Project). You may find GitHub repository link of this project: [Click Here](https://github.com/Jia02/-Multiclass-Classification-ML-Streamlit)")          
