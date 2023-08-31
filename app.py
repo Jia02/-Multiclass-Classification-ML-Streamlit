@@ -99,8 +99,9 @@ def main():
         
        st.write("Developed By: Lim YuJia")
        st.markdown("""
-        [Linkedin](https://www.linkedin.com/in/yujia-lim-b85081213/) |
+        [LinkedIn](https://www.linkedin.com/in/yujia-lim-b85081213/) | [Github Repository](https://github.com/Jia02/-Multiclass-Classification-ML-Streamlit)
        """)
+       st.markdown("This project is insipired by [Stackup](https://app.stackup.dev/campaign_page/python-end-to-end-multiclass-classification-project) and [Avikumar Talaviya](https://github.com/avikumart/Road-Traffic-Severity-Classification-Project).")
 
 a,b,c = st.columns([0.2,0.6,0.2])
 with b:
@@ -111,8 +112,9 @@ with b:
 st.subheader("📝Description:")
 st.text("""
         This dataset originates from the police departments of Addis Ababa Sub-city and serves as the foundation for master's research endeavors. 
-        The dataset's compilation draws from manual records documenting road traffic accidents spanning 2017 to 2020, encompassing 32 distinct features and 12,316 instances of accidents. 
-        Subsequently, a preprocessing phase is undertaken, followed by the application of diverse machine learning classification algorithms to discern significant accident causes through comprehensive analysis.
+        The dataset's compilation draws from manual records documenting road traffic accidents spanning 2017 to 2020, encompassing 32 distinct features and 12,316 instances of accidents.  
+        This application aims to predict the severity of road traffic accidents based on 10 differnet features modified by the user in order to discern significant accident causes through comprehensive analysis.
+
 """)
 
 st.markdown("Source of the dataset: [Click Here](https://www.narcis.nl/dataset/RecordID/oai%3Aeasy.dans.knaw.nl%3Aeasy-dataset%3A191591)")
@@ -121,10 +123,9 @@ st.subheader("Statement of Problem:")
 st.text("""The target feature is `Accident_severity` which is a multi-class data. 
 The task aims to classify this variable based on the other 31 features.
 The metric for evaluation is f1-score.
-""")
+Random forest classification model is used to predict the target feature based on the selected 10 input feature.""")
   
 # run the main function        
 if __name__ == '__main__':
   main()
-
-  st.markdown("This project is insipired by [Stackup](https://app.stackup.dev/campaign_page/python-end-to-end-multiclass-classification-project) and [Avikumar Talaviya](https://github.com/avikumart/Road-Traffic-Severity-Classification-Project). You may find GitHub repository link of this project: [Click Here](https://github.com/Jia02/-Multiclass-Classification-ML-Streamlit)")          
+          
