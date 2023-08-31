@@ -15,9 +15,9 @@ The first stage involves analysing the relationship between the input features a
 
 ## Feature Engineering and Modeling through Classification
 This stage involves building a random forest classification model and evaluating the model based on several performance metrics. The tasks include:
-1. Conduct feature engineering encompassing conversion of the data type of `time` column, missing value handling, one-hot encoding, and target encoding.
-2. Employ the Chi2 statistic for feature selection.
-3. Address data imbalance through the SMOTENC technique with the use of the Scikit-learn library. 
+1. Conduct feature engineering encompassing conversion of the data type of `time` column, missing value handling, one-hot encoding, and target encoding with Pandas library. 
+2. Employ the Chi2 statistic for feature selection with the use of the Scikit-learn library. 
+3. Address data imbalance through the SMOTENC technique. 
 4. Develop a random forest classification model and subsequently assess its performance.
 
 ## Build and Deploy a Streamlit web application
