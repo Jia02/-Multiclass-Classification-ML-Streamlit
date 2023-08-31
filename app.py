@@ -90,16 +90,14 @@ def main():
         
         if prediction == 0:
             text="The severity prediction is ❗ fatal injury ❗"
-            #st.write(f"The severity prediction is ❗ fatal injury ❗")
+
         elif prediction == 1:
-            #st.write(f"The severity prediction is major injury ⚠")
             text="The severity prediction is major injury ⚠"
         else:
-            #st.write(f"The severity prediction is minor injury")
             text="The severity prediction is minor injury"
 
-        st.text_area("Level of Severity", text, key='textarea_id')
-        st.markdown('<style>div#textarea_id { text-align:center;font-size:16px;font-weight:bold; }</style>', unsafe_allow_html=True)
+        st.markdown(f'<p style="text-align:center; font-size:26px; font-weight:bold;">{text}</p>', unsafe_allow_html=True)
+
     
     st.write("Developed By: Lim YuJia")
     st.markdown("""
