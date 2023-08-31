@@ -109,7 +109,7 @@ with b:
 
 # description about the project and code files       
 st.subheader("📝Description:")
-st.text_area(st.text("""
+st.text_area("Problem Statement",st.text("""
         This dataset originates from the police departments of Addis Ababa Sub-city and serves as the foundation for master's research endeavors. 
         The dataset's compilation draws from manual records documenting road traffic accidents spanning 2017 to 2020, encompassing 32 distinct features and 12,316 instances of accidents. 
         Subsequently, a preprocessing phase is undertaken, followed by the application of diverse machine learning classification algorithms to discern significant accident causes through comprehensive analysis.
