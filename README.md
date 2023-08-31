@@ -25,7 +25,7 @@ This stage involves building an interactive web Streamlit application for users 
 1. Select 7 categorical input features, convert categorical inputs into their respective encodings, and save the ordinal encoder object as `ordinal_encoder2.joblib`.
 2. Select 3 numerical target features, combine the 10 features to train the final model for inference, and save the model object as `rta_model_deploy3.joblib`.
 3. Create the Strealit project by writing the code in [app.py](app.py). 
-4. Deploy the app on Streamlit cloud. 
+4. Deploy the [app](https://vas-prediction.streamlit.app/) on Streamlit cloud. 
    
 ## Credits
 
