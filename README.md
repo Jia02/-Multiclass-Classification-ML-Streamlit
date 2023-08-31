@@ -27,3 +27,16 @@ This stage involves building an interactive web Streamlit application for users 
 3. Create the Strealit project by writing the code in [app.py](app.py). 
 4. Deploy the app on Streamlit cloud. 
    
+## Credits
+
+This project was inspired by or references the following sources:
+
+- [Stackup](https://app.stackup.dev/campaign_page/python-end-to-end-multiclass-classification-project)
+  - Initiated the project by providing source code and descriptions of the execution of code.
+  - 
+- [Avikumar Talaviya](https://www.example.com/source1](https://twitter.com/avikumart)
+  - Collaborated with Stackup for the project initiation. 
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
