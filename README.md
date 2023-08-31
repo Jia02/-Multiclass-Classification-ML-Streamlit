@@ -8,22 +8,28 @@ The project entails comprehensive exploratory data analysis (EDA) techniques to 
    
 ## Insights into Dataset 
 The first stage involves analysing the relationship between the input features and target features through the technique of EDA. The tasks involve:
-1. Utilize EDA methods to extract insights from the dataset.
+1. Utilize EDA methods to analyze data using `matplotlib` and 'seaborn'.  
 2. Examine the interrelationships among dataset columns to uncover valuable patterns.
-3. Leverage the dabl (Data Analysis Baseline Library)[^1] to create informative visualizations and graphs for in-depth data analysis.
+3. Leverage the `dabl` (Data Analysis Baseline Library)[^1] to create informative visualizations and graphs for in-depth data analysis.
 [^1]: Keep in mind that the library is still under active development and isn't recommended for production use. Find more details about the [library](https://amueller.github.io/dabl/dev/) here.
 
 ## Feature Engineering and Modeling through Classification
 This stage involves building a random forest classification model and evaluating the model based on several performance metrics. The tasks include:
-1. Conduct feature engineering encompassing conversion of the data type of `time` column, missing value handling, one-hot encoding, and target encoding with Pandas library. 
-2. Employ the Chi2 statistic for feature selection with the use of the Scikit-learn library. 
-3. Address data imbalance through the SMOTENC technique. 
-4. Develop a random forest classification model and subsequently assess its performance.
+1. Conduct feature engineering encompassing :
+   - conversion of the data type of `time` column
+   - missing value handling using `fillna` method
+   - one-hot encoding through Pandas `get_dummies'
+   - target encoding with Pandas `LabelEncoder`.
+2. Employ the 'chi2' statistic and SelectKBest method for feature selection with the use of the Scikit-learn library. 
+4. Address data imbalance through the `SMOTENC` technique. 
+5. Develop a `RandomForest` classification model and subsequently assess its performance.
+   - f1-score selected as the f1-metrics.
+   - evaluation f1_score = 88.26%
 
 ## Build and Deploy a Streamlit web application
 This stage involves building an interactive web Streamlit application for users to engage with the prediction model that is deployed on Streamlit Cloud. The final model for the web application consists of  10 features (7 categorical and 3 numerical).  
-1. Select 7 categorical input features, convert categorical inputs into their respective encodings, and save the ordinal encoder object as `ordinal_encoder2.joblib`.
-2. Select 3 numerical target features, combine the 10 features to train the final model for inference, and save the model object as `rta_model_deploy3.joblib`.
+1. Select 7 categorical input features, convert categorical inputs into their respective encodings, and save the ordinal encoder object in [ordinal_encoder2.joblib](ordinal_encoder2.joblib).
+2. Select 3 numerical target features, combine the 10 features to train the final model for inference, and save the model object as [rta_model_deploy3.joblib](rta_model_deploy3.joblib).
 3. Create the Strealit project by writing the code in [app.py](app.py). 
 4. Deploy the [app](https://vas-prediction.streamlit.app/) on Streamlit cloud. 
    
