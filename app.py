@@ -69,7 +69,6 @@ def main():
        service_vehicle = st.selectbox("Service year of vehicle:", options=options_services_year)
     
        submit = st.form_submit_button(label="Predict")
-       st.write('<div style="display: flex; justify-content: center;">', submit, '</div>', unsafe_allow_html=True)
 
 # encode using ordinal encoder and predict
     if submit:
@@ -112,11 +111,12 @@ st.markdown("<h1 style='text-align: center;'> App for Predicting Accident Severi
 # description about the project and code files       
 st.subheader("📝Description:")
 st.text("""
-        This [dataset](https://www.narcis.nl/dataset/RecordID/oai%3Aeasy.dans.knaw.nl%3Aeasy-dataset%3A191591) originates from the police departments of Addis Ababa Sub-city and serves as the foundation for master's research endeavors. 
+        This dataset originates from the police departments of Addis Ababa Sub-city and serves as the foundation for master's research endeavors. 
         The dataset's compilation draws from manual records documenting road traffic accidents spanning 2017 to 2020, encompassing 32 distinct features and 12,316 instances of accidents.  
         This application aims to predict the severity of road traffic accidents based on 10 differnet features modified by the user in order to discern significant accident causes through comprehensive analysis.
 
 """)
+st.markdown("[Dataset Source](https://www.narcis.nl/dataset/RecordID/oai%3Aeasy.dans.knaw.nl%3Aeasy-dataset%3A191591) | [Kaggle](https://www.kaggle.com/datasets/avikumart/road-traffic-severity-classification)")
 
 st.subheader("❓Statement of Problem:")
 st.text("""The target feature is `Accident_severity` which is a multi-class data. 
