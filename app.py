@@ -99,16 +99,14 @@ def main():
         st.markdown(f'<p style="text-align:center; font-size:26px; font-weight:bold;">{text}</p>', unsafe_allow_html=True)
 
     
-    st.write("Developed By: Lim YuJia")
+    st.write("Developed By: YJ Lim")
     st.markdown("""
     [LinkedIn](https://www.linkedin.com/in/yujia-lim-b85081213/) | [Github Repository](https://github.com/Jia02/-Multiclass-Classification-ML-Streamlit)
     """)
-    st.markdown("This project is insipired by [Stackup](https://app.stackup.dev/campaign_page/python-end-to-end-multiclass-classification-project) and [Avikumar Talaviya](https://github.com/avikumart/Road-Traffic-Severity-Classification-Project).")
 
 a,b,c = st.columns([0.2,0.6,0.2])
 with b:
  st.image("banner-pic.jpeg", use_column_width=True)
-
 
 # description about the project and code files       
 st.subheader("📝Description:")
