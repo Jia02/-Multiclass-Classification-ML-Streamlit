@@ -53,9 +53,6 @@ options_acc_area = ['Office areas', 'Residential areas', ' Church areas',
 features = ['Number_of_vehicles_involved','Number_of_casualties','Hour_of_Day','Type_of_collision','Age_band_of_driver','Sex_of_driver',
     'Educational_level','Service_year_of_vehicle','Day_of_week','Area_accident_occured']
 
-# Give a title to web app using html syntax
-st.markdown("<h1 style='text-align: center;'> App for Predicting Accident Severity  🚗🤕 </h1>", unsafe_allow_html=True)
-
 # define a main() function to take inputs from user in form based approach
 def main():
     with st.form("road_traffic_severity_form"):
@@ -71,7 +68,8 @@ def main():
        Education = st.selectbox("Education of driver:",options=options_education_level)
        service_vehicle = st.selectbox("Service year of vehicle:", options=options_services_year)
     
-       submit = st.form_submit_button("Predict")
+       submit = st.form_submit_button(label="Predict")
+       st.write('<div style="display: flex; justify-content: center;">', submit, '</div>', unsafe_allow_html=True)
 
 # encode using ordinal encoder and predict
     if submit:
@@ -108,18 +106,19 @@ a,b,c = st.columns([0.2,0.6,0.2])
 with b:
  st.image("banner-pic.jpeg", use_column_width=True)
 
+# Title to web app using html syntax
+st.markdown("<h1 style='text-align: center;'> App for Predicting Accident Severity  🚗🤕 </h1>", unsafe_allow_html=True)
+
 # description about the project and code files       
 st.subheader("📝Description:")
 st.text("""
-        This dataset originates from the police departments of Addis Ababa Sub-city and serves as the foundation for master's research endeavors. 
+        This [dataset](https://www.narcis.nl/dataset/RecordID/oai%3Aeasy.dans.knaw.nl%3Aeasy-dataset%3A191591) originates from the police departments of Addis Ababa Sub-city and serves as the foundation for master's research endeavors. 
         The dataset's compilation draws from manual records documenting road traffic accidents spanning 2017 to 2020, encompassing 32 distinct features and 12,316 instances of accidents.  
         This application aims to predict the severity of road traffic accidents based on 10 differnet features modified by the user in order to discern significant accident causes through comprehensive analysis.
 
 """)
 
-st.markdown("Source of the dataset: [Click Here](https://www.narcis.nl/dataset/RecordID/oai%3Aeasy.dans.knaw.nl%3Aeasy-dataset%3A191591)")
-
-st.subheader("Statement of Problem:")
+st.subheader("❓Statement of Problem:")
 st.text("""The target feature is `Accident_severity` which is a multi-class data. 
 The task aims to classify this variable based on the other 31 features.
 The metric for evaluation is f1-score.
