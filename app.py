@@ -33,8 +33,9 @@ options_types_collision = [
     'Collision with roadside-parked vehicles',
     'Fall from vehicles',
     'With Train',
+    'Other',
     'Unknown',
-    'Other',]
+    ]
 
 options_sex = ['Male','Female','Unknown']
 
@@ -46,8 +47,8 @@ options_services_year = ['Below 1yr','1-2yr','2-5yrs','5-10yrs','Above 10yr','Un
 options_acc_area = ['Office areas', 'Residential areas', ' Church areas',
     ' Industrial areas', 'School areas', ' Recreational areas',
     ' Outside rural areas', ' Hospital areas', ' Market areas',
-    'Rural village areas', 'Unknown', 'Rural village areasOffice areas',
-    'Recreational areas', 'Other']
+    'Rural village areas', 'Rural village areas',
+    'Recreational areas', 'Other', 'Unknown']
 
 # features list
 features = ['Number_of_vehicles_involved','Number_of_casualties','Hour_of_Day','Type_of_collision','Age_band_of_driver','Sex_of_driver',
@@ -58,15 +59,15 @@ def main():
     with st.form("road_traffic_severity_form"):
        st.subheader("Please enter the following inputs:")
        Day_week = st.selectbox("Day of the week:", options=options_day)
-       Hour = st.slider("Hour of the day:", 0, 23, value=0, format="%d")
        collision = st.selectbox("Type of collision:",options=options_types_collision)
-       No_vehicles = st.slider("Number of vehicles involved:",1,7, value=0, format="%d")
-       No_casualties = st.slider("Number of casualties:",1,8, value=0, format="%d")
        Accident_area = st.selectbox("Area of accident:", options=options_acc_area)
        Age_band = st.selectbox("Driver age group?:", options=options_age)
        Sex = st.selectbox("Sex of the driver:", options=options_sex)
        Education = st.selectbox("Education of driver:",options=options_education_level)
        service_vehicle = st.selectbox("Service year of vehicle:", options=options_services_year)
+       Hour = st.slider("Hour of the day:", 0, 23, value=0, format="%d") 
+       No_vehicles = st.slider("Number of vehicles involved:",1,7, value=1, format="%d")
+       No_casualties = st.slider("Number of casualties:",1,8, value=1, format="%d") 
     
        submit = st.form_submit_button(label="Predict")
 
